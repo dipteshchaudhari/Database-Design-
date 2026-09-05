@@ -39,10 +39,10 @@ The learning path is based on the **MySQL Handbook** used for this work, progres
 
 - [x] `SELECT`
 - [x] `INSERT INTO`
-- [ ] `UPDATE`
-- [ ] `DELETE`
+- [x] `UPDATE`
 - [x] `ALTER TABLE`
 - [x] Rename tables
+- [x] `DELETE` — practiced with `WHERE` and reviewed unrestricted deletion
 - [ ] `TRUNCATE`
 - [ ] `CHANGE` vs `MODIFY`
 
@@ -143,7 +143,8 @@ Database-Design-/
 │
 ├── README.md
 ├── my_sql_script.sql       # Initial database/table work and INSERT practice
-└── my_sql_script_2.sql     # SELECT, filtering, sorting and LIMIT practice
+├── my_sql_script_2.sql     # SELECT, filtering, sorting and LIMIT practice
+└── my_sql_script_3.sql     # UPDATE and DELETE practice
 ```
 
 The scripts are intentionally kept as a **learning workspace** rather than a polished production database. Queries may evolve as concepts are practiced and improved.
@@ -163,6 +164,9 @@ RENAME TABLE
 INSERT INTO
 SELECT
 WHERE
+UPDATE
+DELETE
+IS NULL
 BETWEEN
 IN
 LIKE
@@ -171,7 +175,36 @@ ORDER BY
 LIMIT / OFFSET
 ```
 
-For example, the current practice includes filtering users by gender, checking `NULL` values, matching names with `LIKE`, sorting results, and limiting returned rows.
+### ✏️ UPDATE Practice
+
+`my_sql_script_3.sql` contains examples of updating rows by `id`, email, name, and conditions such as `IS NULL` and salary comparisons.
+
+```sql
+UPDATE users
+SET salary = 10000
+WHERE id > 0 AND salary IS NULL;
+
+UPDATE users
+SET salary = salary + 10000
+WHERE salary < 20000;
+```
+
+> ⚠️ MySQL Workbench's **Safe Update Mode** may reject updates whose `WHERE` clause does not use a key column. This is a Workbench safety feature, not invalid SQL syntax.
+
+### 🗑️ DELETE Practice
+
+The latest script also demonstrates the difference between deleting selected rows and removing all rows while keeping the table structure.
+
+```sql
+DELETE FROM users
+WHERE id = 7;
+
+DELETE FROM users;
+```
+
+`DROP TABLE users;` is also included as an example of removing the table itself, including its structure.
+
+> ⚠️ Always verify your `WHERE` clause before running `UPDATE` or `DELETE` on important data.
 
 ---
 
