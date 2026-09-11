@@ -17,7 +17,7 @@
 
 ## 📌 About This Repository
 
-This repository contains my **hands-on MySQL and Database Design practice**. Every SQL script represents a concept I studied and practiced rather than just reading about it.
+This repository contains my ** MySQL and Database Design **. Every SQL script represents a concept and practiced rather than just reading about it.
 
 The repository progressed from creating databases and tables to working with **CRUD operations, constraints, SQL functions, transactions, keys, relationships, joins, UNION, self joins, views, indexes, subqueries, GROUP BY, HAVING, and ROLLUP**.
 
@@ -408,9 +408,9 @@ Think Like a Database Developer 🚀
 
 ---
 
-## 🏁 Completion Status
+## 🏁 Completed Basic SQL
 
-### ✅ Database Design & MySQL Learning Phase — Completed
+### ✅ Database Design & MySQL — Completed
 
 **15 topic scripts + additional lab work** are now included in this repository.
 
@@ -422,7 +422,7 @@ The repository can continue to grow later with topics such as **stored procedure
 
 **Diptesh Chaudhari**
 
-Learning databases, SQL, and backend fundamentals — one query at a time. 🚀
+databases, SQL, and backend fundamentals — one query at a time. 🚀
 
 <p align="center">
   <i>Built with curiosity, SQL, experimentation, and a lot of queries. 🐬</i>
